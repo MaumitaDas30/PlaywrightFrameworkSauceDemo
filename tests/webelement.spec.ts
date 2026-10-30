@@ -8,9 +8,9 @@ await page.getByPlaceholder("Enter your name", {exact:true}).fill("Hiya")
 
 await page.getByPlaceholder("Enter Your Email", {exact:true}).fill("abc@gmail.com")
 
-await page.getByPlaceholder("Enter your name", {exact:true}).type("Riya")
+await page.getByPlaceholder("Enter your name", {exact:true}).fill("Riya")
 
-await page.getByPlaceholder("Enter Your Email", {exact:true}).type("xyz@gmail.com")
+await page.getByPlaceholder("Enter Your Email", {exact:true}).fill("xyz@gmail.com")
 
 await page.locator("//button[text()='Register']").click()
 
@@ -59,12 +59,12 @@ let rest1=await page.locator("#name").isVisible()
 let rest2=await page.locator("#name").isEditable()
 let rest3=await page.locator("#name").isEnabled()
 let rest4=await page.locator("#name").isDisabled()
-let rest5=await page.locator("#name").isChecked()
+//let rest5=await page.locator("#name").isChecked()
 
 console.log(rest1)
 console.log(rest2)
 console.log(rest3)
 console.log(rest4)
-console.log(rest5)
+//console.log(rest5)
 
 })

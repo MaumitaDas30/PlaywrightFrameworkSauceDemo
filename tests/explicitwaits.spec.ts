@@ -1,6 +1,6 @@
 import {test, expect} from "@playwright/test"
 
-test("element_based_waits", async({page})=> {
+test.only("element_based_waits", async({page})=> {
    
     await page.goto("https://www.amazon.in/")
 
@@ -46,7 +46,7 @@ test("waitForEvent", async({page})=> {
         
 })
 
-test.only("custom waits", async({page})=> {
+test("custom waits", async({page})=> {
  
     await page.goto("https://www.amazon.com/")
 

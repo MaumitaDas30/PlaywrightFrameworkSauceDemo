@@ -1,8 +1,8 @@
 import {test, expect} from '@playwright/test'
-import registration from '../PageObjectModel/demoqa.page.ts'
+import registration from '../PageObjectModel/demoqa.page'
 import jsondata from "../DDT/registration.json"
 
-test ("registration via POM", async({page})=> {
+test.only("registration via POM", async({page})=> {
     //creating object for pom class
     let registrationPage = new registration(page)
 
@@ -46,7 +46,7 @@ for (let option of subjects)
 
     await registrationPage.chkMusic.check()
 
-    await registrationPage.filePicture.setInputFiles("C:/Users/maumi/Downloads/error-context (3).md")
+    await registrationPage.filePicture.setInputFiles("C:/Users/maumi/Downloads/Checkbox Actions.pdf")
 
     await registrationPage.txtAddress.fill("Whilefield Bangalore")
 
@@ -64,7 +64,7 @@ for (let option of subjects)
 
 })
 
-test.only("Pom with json data registration", async({page})=> {
+test("Pom with json data registration", async({page})=> {
    //creating object of pom class
    let newRegistration = new registration(page);
 

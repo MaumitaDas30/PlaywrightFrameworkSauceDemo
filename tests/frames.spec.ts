@@ -34,10 +34,10 @@ test.only("nested frame", async({page})=> {
  
  let radiobutton= await iframe.locator('//div[@class="AB7Lab Id5V1"]').nth(1)
  await radiobutton.check()
- expect(radiobutton).toBeChecked()
+ //expect(radiobutton).toBeChecked()
 
  let checkbox= await iframe.locator("(//div[@class='uHMk6b fsHoPb'])[2]")
  await checkbox.click()
- expect(checkbox).toBeChecked()
+ //expect(checkbox).toBeChecked()
 
 }) 

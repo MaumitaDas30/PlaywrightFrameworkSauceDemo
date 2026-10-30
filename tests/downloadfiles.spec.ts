@@ -2,7 +2,7 @@ import {test,expect} from '@playwright/test'
 import path from "path"
 import fs from "fs" //file system
 
-test("download file", async ({page})=> {
+test.only("download file", async ({page})=> {
   await page.goto("https://demoapps.qspiders.com/ui/download?sublist=0")
   await page.getByPlaceholder("Enter text here", {exact: true}).fill("my downloaded file")
 
@@ -27,8 +27,8 @@ test("download file", async ({page})=> {
 
 })   
 
-test.only("download demo", async ({page})=> {
-  await page.goto("https://demo.automationtesting.in/FileDownload.html ")
+test("download demo", async ({page})=> {
+  await page.goto("https://demo.automationtesting.in/FileDownload.html")
   await page.locator("//textarea[@id='textbox']").fill("This my new downloaded file section.")
 
   await page.locator("(//button[text()='Generate File'])[1]").click({force: true}) 
@@ -37,7 +37,7 @@ test.only("download demo", async ({page})=> {
   let [downloadfile] = await Promise.all([
 
     page.waitForEvent("download"),
-    page.locator("#link-to-download").click()
+    page.locator("//a[@id='link-to-download']").click()
   ])
 
   let downloadedfolder="C:/Users/maumi/OneDrive/Desktop/playwrightM18/download files"
