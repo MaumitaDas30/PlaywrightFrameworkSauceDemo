@@ -41,6 +41,7 @@ test.afterEach(async()=> {
     console.log("close browser manually")
     console.log("screenshot after failure")
     console.log("clear")
+    console.log("hi")
 })
 
 /*
