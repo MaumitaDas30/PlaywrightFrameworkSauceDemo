@@ -29,9 +29,9 @@ test.afterAll(async()=> {
 })
 
 test.beforeEach(async({page})=> {
-    console.log("launch browser");
-    console.log("launch url")
-    console.log("login")
+   // console.log("launch browser");
+   // console.log("launch url")
+    //console.log("login")
     await page.goto("https://www.amazon.com/")
 
 })
